@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The DOM Practical Guide</title>
+    <link rel ='stylesheet' href="./src/styles.css"/>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <header>
+        <h1>Welcome to the Document Object Model Practical Guide</h1>
+        <h4>Trying to see what you can do with DOM? Click any button to see some examples!</h4>
+    </header>
+    <main>
+    <nav id="top-menu"></nav>
+    <nav id ='sub-menu'></nav>
+      <div>
+        <ul>I'm a Proud Parent!
+            <li>I'm child 1</li>
+            <li>I'm child 2</li>
+            <li>I'm child 3</li>
+            <li>I'm child 4</li>
+            <li>I'm child 5</li>
+        </ul>
+      </div>
+      <div><p>This webpage is dedicated to showing off what the DOM model can do to a webpage by 
+        using Javascript and coding logic. Treat this webpage like an interactive art gallery. I've
+        also added some descriptions on how each portion is coded and works. Note: this is page is 
+        powered by pure Javascript without the use of any other frameworks or APIs. </p>
+        <p>Hey, do you want to play a game?!</p>
+        <input type="button" value="Yeah I do! Launch it!" />
+    </div>
+        <form id="registration">
+            <input id="username" type="text" placeholder="Username" />
+            <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+  
+            <input id="email" type="text" placeholder="Email" />
+            <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
+            ><br />
+  
+            <input id="password" type="text" placeholder="Password" />
+            <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+  
+            <input
+              id="passwordCheck"
+              type="text"
+              placeholder="Repeat Password"
+            />
+            <span class="input-icon"><i class="fa-solid fa-key"></i></span
+            ><br /><br />
+  
+            <div class="flex-row">
+              <label for="terms"><input name="terms" type="radio" />I agree to the use of this website</label>
+              
+              <label for="terms"><input name="terms" type="radio" />I also don't agree to the use of this website?</label>
+              
+              <label for="terms"><input name="terms" type="radio" />I'm kind of neutral to the whole use of this thing....</label>
+              <br/>
+              <input type="submit" value="Fire the Submit!" />
+            </div>
+        </form>
+    </div>
+    
+    </main>
+
+    <script src="./src/index.mjs"></script>
+  </body>
+</html>
