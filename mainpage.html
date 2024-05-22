@@ -14,7 +14,7 @@
     <main>
     <nav id="top-menu"></nav>
     <nav id ='sub-menu'></nav>
-      <div>
+      <div class="list-terms">
         <ul>I'm a Proud Parent!
             <li>I'm child 1</li>
             <li>I'm child 2</li>
@@ -31,33 +31,27 @@
         <input type="button" value="Yeah I do! Launch it!" />
     </div>
         <form id="registration">
-            <input id="username" type="text" placeholder="Username" />
-            <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+            <input id="username" type="text" title="Put a user name that's at least 4 digits long, but not longer than 20 digits" placeholder="Faux Username" minlength="4" maxlength="20" required/>
+            <br />
+            <input id="email" type="email" placeholder="Example Email Address" />
+            <br />
   
-            <input id="email" type="text" placeholder="Email" />
-            <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
-            ><br />
-  
-            <input id="password" type="text" placeholder="Password" />
-            <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+            <input id="password" type="text" placeholder="Don't Actually Put a Password" />
+            <br />
   
             <input
-              id="passwordCheck"
-              type="text"
-              placeholder="Repeat Password"
-            />
-            <span class="input-icon"><i class="fa-solid fa-key"></i></span
-            ><br /><br />
+              id="passwordCheck" type="text" placeholder="Just an example password!" />
+            <br /><br />
   
-            <div class="flex-row">
-              <label for="terms"><input name="terms" type="radio" />I agree to the use of this website</label>
+            <div id="radio-btns">
+              <label><input name="terms" type="radio" />I agree to the use of this website</label>
               
-              <label for="terms"><input name="terms" type="radio" />I also don't agree to the use of this website?</label>
+              <label><input name="terms" type="radio" />I also don't agree to the use of this website?</label>
               
-              <label for="terms"><input name="terms" type="radio" />I'm kind of neutral to the whole use of this thing....</label>
-              <br/>
-              <input type="submit" value="Fire the Submit!" />
+              <label><input name="terms" type="radio" />I'm kind of neutral to the whole use of this thing....</label>
+              <br/>        
             </div>
+            <input type="submit" value="Fire the Submit!" />
         </form>
     </div>
     
