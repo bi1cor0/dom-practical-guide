@@ -9,14 +9,11 @@ const radioBtns = radio.getElementsByTagName("input")
 var topMenuEl = document.getElementById(`top-menu`)
 
 var subMenuEl = document.getElementById(`sub-menu`);
-subMenuEl.style.height = `100%`;
-subMenuEl.style.backgroundColor = 'skyblue'
-subMenuEl.style.position = 'absolute'
-subMenuEl.style.top = '0'
+
 
 var menuText = [
     {text: 'click', href: '#', subLinks: [
-      {text: 'i am', href: '/catalog/all'},
+      {text: 'i`m', href: '/catalog/all'},
       {text: 'being', href: '/catalog/top'},
       {text: 'generated', href: '/catalog/search'},
     ]},
@@ -26,7 +23,7 @@ var menuText = [
       {text: 'on the bar', href: '/orders/history'},
     ]},
     {text: 'of me', href: '#', subLinks: [
-      {text: 'is that', href: '/account/profile'},
+      {text: 'isn`t that', href: '/account/profile'},
       {text: 'cool?', href: '/account/signout'},
     ]},
   ];
@@ -53,8 +50,7 @@ var menuText = [
       } else {
           return;
       }
-      console.log(event.target)
-      console.log(topMenuLinks)
+
       for(let btn = 0; btn < topMenuLinks.length; btn++){ //created for loop to loop through the top menu links to search for everything but the active class target.
         if(topMenuLinks[btn] !== event.target){
           topMenuLinks[btn].classList.remove(`active`);
@@ -66,12 +62,12 @@ var menuText = [
       for(c of menuText){//nested for loop for when the event target has an `active` tag. 
         if(c.text === event.target.textContent){ //if the iterator goes through the menuLinks array and references the same text as the event target, go forward.
           if(c.subLinks){ //and if that portion of the array has a sublinks menu, keep going forward.
-            subMenuEl.style.top = `100%`;
+            subMenuEl.style.top = `50px`;
             buildSubmenu(c.subLinks)} //call helper function to generate new sublinks.
-            else{subMenuEl.style.top = `0%`;} //hide submenu
+            else{subMenuEl.style.top = `0`;} //hide submenu
         }
       }
-    } else{subMenuEl.style.top = `0%`;}
+    } else{subMenuEl.style.top = `0`;}
     }
   function buildSubmenu(subArr) {
   for(let Link of subArr){
