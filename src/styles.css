@@ -2,3 +2,19 @@ header {
     text-align: center;
 }
 form {text-align: center;}
+#top-menu {
+    z-index: 20;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    height: 50px;
+  }
+
+  a {color: white;
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .active {background-color: aqua; color: black;}

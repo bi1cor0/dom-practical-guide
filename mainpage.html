@@ -33,18 +33,18 @@
         <form id="registration">
             <input id="username" type="text" title="Put a user name that's at least 4 digits long, but not longer than 20 digits" placeholder="Faux Username" minlength="4" maxlength="20" required/>
             <br />
-            <input id="email" type="email" placeholder="Example Email Address" />
+            <input id="email" type="email" placeholder="Example Email Address" required/>
             <br />
   
-            <input id="password" type="text" placeholder="Don't Actually Put a Password" />
+            <input id="random" type="text" placeholder="Put anything here!" required/>
             <br />
   
             <input
-              id="passwordCheck" type="text" placeholder="Just an example password!" />
+              id="password" type="text" placeholder="Don't Actually Put a Password"" required/>
             <br /><br />
   
             <div id="radio-btns">
-              <input name="terms" type="radio" value="You agree you like this website." />I agree to the use of this website <br>
+              <input name="terms" type="radio" value="You agree you like this website." required/>I agree to the use of this website <br>
               
               <input name="terms" type="radio" value="You don't agree, but you're on the fence."/>I also don't agree to the use of this website? <br>
               
