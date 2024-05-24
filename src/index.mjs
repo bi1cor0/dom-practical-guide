@@ -15,19 +15,19 @@ subMenuEl.style.position = 'absolute'
 subMenuEl.style.top = '0'
 
 var menuText = [
-    {text: 'catalog', href: '#', subLinks: [
-      {text: 'all', href: '/catalog/all'},
-      {text: 'top selling', href: '/catalog/top'},
-      {text: 'search', href: '/catalog/search'},
+    {text: 'click', href: '#', subLinks: [
+      {text: 'i am', href: '/catalog/all'},
+      {text: 'being', href: '/catalog/top'},
+      {text: 'generated', href: '/catalog/search'},
     ]},
-    {text: 'orders', href: '#' , subLinks: [
-      {text: 'new', href: '/orders/new'},
-      {text: 'pending', href: '/orders/pending'},
-      {text: 'history', href: '/orders/history'},
+    {text: 'each one', href: '#' , subLinks: [
+      {text: 'each time', href: '/orders/new'},
+      {text: 'you click', href: '/orders/pending'},
+      {text: 'on the bar', href: '/orders/history'},
     ]},
-    {text: 'account', href: '#', subLinks: [
-      {text: 'profile', href: '/account/profile'},
-      {text: 'sign out', href: '/account/signout'},
+    {text: 'of me', href: '#', subLinks: [
+      {text: 'is that', href: '/account/profile'},
+      {text: 'cool?', href: '/account/signout'},
     ]},
   ];
   
