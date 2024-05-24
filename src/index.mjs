@@ -30,7 +30,7 @@ var menuText = [
   
   menuText.forEach((Link) => {
       let newLink = document.createElement(`a`)
-      //newLink.setAttribute(`href`, Link.href)
+      newLink.setAttribute(`href`, Link.href)
       newLink.textContent = Link.text
       topMenuEl.appendChild(newLink)
   }) 
@@ -62,7 +62,7 @@ var menuText = [
       for(c of menuText){//nested for loop for when the event target has an `active` tag. 
         if(c.text === event.target.textContent){ //if the iterator goes through the menuLinks array and references the same text as the event target, go forward.
           if(c.subLinks){ //and if that portion of the array has a sublinks menu, keep going forward.
-            subMenuEl.style.top = `50px`;
+            subMenuEl.style.top = `150px`;
             buildSubmenu(c.subLinks)} //call helper function to generate new sublinks.
             else{subMenuEl.style.top = `0`;} //hide submenu
         }
@@ -71,8 +71,8 @@ var menuText = [
     }
   function buildSubmenu(subArr) {
   for(let Link of subArr){
-    let newsubLink = document.createElement(`a`)
-    newsubLink.setAttribute(`href`, Link.href)
+    let newsubLink = document.createElement(`h4`)
+    //newsubLink.setAttribute(`href`, Link.href)
     newsubLink.textContent = Link.text
     subMenuEl.appendChild(newsubLink)
   }
