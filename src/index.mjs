@@ -7,6 +7,7 @@ const radio = document.getElementById("radio-btns")
 const radioBtns = radio.getElementsByTagName("input")
 const listItems = document.querySelectorAll("li")
 const listBtn = document.getElementById("listBtn")
+const sibOutput = document.getElementById("siblingOut")
 var topMenuEl = document.getElementById(`top-menu`)
 var subMenuEl = document.getElementById(`sub-menu`);
 let count = 0;
@@ -26,9 +27,13 @@ function spotLight(){
   if(listItems[count].classList.contains(`spotlight`)){
     listItems[count].textContent = "I'm the favorite child this time!"
   } 
-  console.log(listItems)
+  if(count !== listItems.length-1){
+    sibOutput.textContent = "The next sibling in the list says: " + listItems[count].nextElementSibling.innerText;
+  }
+  else{ 
+    sibOutput.textContent = "The next sibling in the list says: " + listItems[0].innerText; }
   count++
-
+ 
 }
 
 var menuText = [
@@ -104,6 +109,11 @@ topMenuEl.addEventListener('click', topGhost)
 function validation(e) {
     e.preventDefault()
     const radioResult = radioSelector()
+    const emailTrue = validateEmail()
+    if (emailTrue === false) {
+      e.returnValue = false;
+      return false;
+    }
     console.log(e.target)
     alert(
     `Name: ${usernameVal.value}
@@ -111,8 +121,39 @@ function validation(e) {
     Random: ${randVal.value}
     Password: ${passVal.value} lol I'm not actually saving this.
     You said: ${radioResult}`);
-    
+    return true;
  }
+
+ function validateEmail() {
+  let emailTrue = emailVal.value;
+
+  if (emailTrue === "") {
+    alert("Please provide an email.");
+    email.focus();
+    return false;
+  }
+
+  const atpos = emailTrue.indexOf("@");
+  const dotpos = emailTrue.lastIndexOf(".");
+
+  if (atpos < 1) {
+    alert(
+      "Your email must include an @ symbol which must not be at the beginning of the email."
+    );
+    email.focus();
+    return false;
+  }
+
+  if (dotpos - atpos < 2) {
+    alert(
+      "Invalid structure: @.\nYou must include a domain name after the @ symbol."
+    );
+    email.focus();
+    return false;
+  }
+
+  return emailTrue;
+}
 
  function radioSelector(){
     for(let i=0; i < radioBtns.length; i++){
