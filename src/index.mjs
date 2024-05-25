@@ -1,8 +1,8 @@
 const form = document.getElementById("registration");
 const usernameVal = document.getElementById("username");
 const emailVal = document.getElementById("email");
+const randVal = document.getElementById("random");
 const passVal = document.getElementById("password");
-const checkVal = document.getElementById("passwordCheck");
 const radio = document.getElementById("radio-btns")
 const radioBtns = radio.getElementsByTagName("input")
 const listItems = document.querySelectorAll("li")
@@ -10,21 +10,23 @@ const listBtn = document.getElementById("listBtn")
 var topMenuEl = document.getElementById(`top-menu`)
 var subMenuEl = document.getElementById(`sub-menu`);
 let count = 0;
-console.log(listItems)
 listBtn.addEventListener('click', spotLight)
 
 function spotLight(){
   if(count === listItems.length){count = 0;}
+
   listItems[count].classList.add("spotlight")
-  count++
-  console.log(listItems)
 
   for(let i = 0; i < listItems.length; i++){ //created for loop to loop through the list items to search for everything but the active class target.
     if(listItems[i] !== listItems[count]){
-      listItems[i].classList.remove(`spotlight`);
- 
+      listItems[i].classList.remove("spotlight")
     } 
   } 
+  if(listItems[count].classList.contains(`spotlight`)){
+    listItems[count].textContent = "I'm the favorite child this time!"
+  } 
+  console.log(listItems)
+  count++
 
 }
 
@@ -105,8 +107,8 @@ function validation(e) {
     alert(
     `Name: ${usernameVal.value}
     Email: ${emailVal.value}
-    Country: ${passVal.value}
-    Password: ${checkVal.value} lol I'm not actually saving this.
+    Random: ${randVal.value}
+    Password: ${passVal.value} lol I'm not actually saving this.
     You said: ${radioResult}`);
     
  }
