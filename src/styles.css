@@ -4,6 +4,7 @@ header {
 form {text-align: center;}
 #top-menu {
     z-index: 20;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,6 +21,7 @@ form {text-align: center;}
     display: flex;
     transition: top 0.5s ease-out;
     justify-content: space-around;
+    align-items: center;
   }
 
   a {color: white;

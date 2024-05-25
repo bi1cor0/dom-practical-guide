@@ -5,11 +5,28 @@ const passVal = document.getElementById("password");
 const checkVal = document.getElementById("passwordCheck");
 const radio = document.getElementById("radio-btns")
 const radioBtns = radio.getElementsByTagName("input")
-
+const listItems = document.querySelectorAll("li")
+const listBtn = document.getElementById("listBtn")
 var topMenuEl = document.getElementById(`top-menu`)
-
 var subMenuEl = document.getElementById(`sub-menu`);
+let count = 0;
+console.log(listItems)
+listBtn.addEventListener('click', spotLight)
 
+function spotLight(){
+  if(count === listItems.length){count = 0;}
+  listItems[count].classList.add("spotlight")
+  count++
+  console.log(listItems)
+
+  for(let i = 0; i < listItems.length; i++){ //created for loop to loop through the list items to search for everything but the active class target.
+    if(listItems[i] !== listItems[count]){
+      listItems[i].classList.remove(`spotlight`);
+ 
+    } 
+  } 
+
+}
 
 var menuText = [
     {text: 'click', href: '#', subLinks: [
@@ -69,6 +86,7 @@ var menuText = [
       }
     } else{subMenuEl.style.top = `0`;}
     }
+  
   function buildSubmenu(subArr) {
   for(let Link of subArr){
     let newsubLink = document.createElement(`h4`)
@@ -79,8 +97,6 @@ var menuText = [
     return subMenuEl;
   }
 topMenuEl.addEventListener('click', topGhost)
-
-form.addEventListener("submit", validation);
 
 function validation(e) {
     e.preventDefault()
@@ -102,3 +118,5 @@ function validation(e) {
         }
     }
 }
+
+form.addEventListener("submit", validation);
