@@ -11,6 +11,7 @@ const sibOutput = document.getElementById("siblingOut")
 var topMenuEl = document.getElementById(`top-menu`)
 var subMenuEl = document.getElementById(`sub-menu`);
 let count = 0;
+
 listBtn.addEventListener('click', spotLight)
 
 function spotLight(){

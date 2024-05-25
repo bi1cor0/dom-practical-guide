@@ -12,6 +12,17 @@ form {text-align: center;}
     height: 50px;
     position: relative;
   }
+  .welcome-block{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .list-terms{
+    width: fit-content;
+  }
+  .intro{
+    width: 80%;
+  }
   #sub-menu {
     z-index: 10;
     width: 100%;
@@ -33,5 +44,6 @@ form {text-align: center;}
   .spotlight {
     font-weight: bold;
     background-color: yellow;
+    width: 60%;
   }
 
