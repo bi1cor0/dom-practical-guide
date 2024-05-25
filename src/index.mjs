@@ -20,6 +20,7 @@ function spotLight(){
   for(let i = 0; i < listItems.length; i++){ //created for loop to loop through the list items to search for everything but the active class target.
     if(listItems[i] !== listItems[count]){
       listItems[i].classList.remove("spotlight")
+      listItems[i].textContent = "I'm child " + (i+1);
     } 
   } 
   if(listItems[count].classList.contains(`spotlight`)){
