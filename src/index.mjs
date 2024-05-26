@@ -49,8 +49,8 @@ var menuText = [
       {text: 'on the bar', href: '/orders/history'},
     ]},
     {text: 'of me', href: '#', subLinks: [
-      {text: 'isn`t that', href: '/account/profile'},
-      {text: 'cool?', href: '/account/signout'},
+      {text: 'click again', href: '/account/profile'},
+      {text: 'to get rid of me', href: '/account/signout'},
     ]},
   ];
   
@@ -88,7 +88,7 @@ var menuText = [
       for(c of menuText){//nested for loop for when the event target has an `active` tag. 
         if(c.text === event.target.textContent){ //if the iterator goes through the menuLinks array and references the same text as the event target, go forward.
           if(c.subLinks){ //and if that portion of the array has a sublinks menu, keep going forward.
-            subMenuEl.style.top = `150px`;
+            subMenuEl.style.top = `100%`;
             buildSubmenu(c.subLinks)} //call helper function to generate new sublinks.
             else{subMenuEl.style.top = `0`;} //hide submenu
         }
@@ -134,10 +134,10 @@ function validation(e) {
     return false;
   }
 
-  const atpos = emailTrue.indexOf("@");
-  const dotpos = emailTrue.lastIndexOf(".");
+  const atPos = emailTrue.indexOf("@");
+  const dotPos = emailTrue.lastIndexOf(".");
 
-  if (atpos < 1) {
+  if (atPos < 1) {
     alert(
       "Your email must include an @ symbol which must not be at the beginning of the email."
     );
@@ -145,7 +145,7 @@ function validation(e) {
     return false;
   }
 
-  if (dotpos - atpos < 2) {
+  if (dotPos - atPos < 2) {
     alert(
       "Invalid structure: @.\nYou must include a domain name after the @ symbol."
     );
